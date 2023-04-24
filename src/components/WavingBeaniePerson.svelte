@@ -148,7 +148,7 @@
 		height="5.333333333333334"
 		width="95"
 		rx="2"
-		fill="black"
+		fill={beanieSecondaryColor}
 	/>
 	<rect
 		class="beanie-stripe"
@@ -157,7 +157,7 @@
 		height="5.333333333333334"
 		width="95"
 		rx="2"
-		fill="black"
+		fill={beanieSecondaryColor}
 	/>
 </svg>
 
