@@ -4,29 +4,27 @@ export type TripInfo = {
 	iconName?: string;
 };
 
-
 type Position = {
-	// Degrees, positive === North, negative === South 
+	// Degrees, positive === North, negative === South
 	latitude: number;
-	// Degrees, positive === East, negative === West 
+	// Degrees, positive === East, negative === West
 	longitude: number;
 	// Metres above sea level
 	elevation?: number;
-}
+};
 
-type Rating = {
-	rater?: "Mitch" | "Rachel",
-	numerator: number,
-	denominator: number,
-}
+export type Rating = {
+	rater?: 'Mitch' | 'Rachel';
+	numerator: number;
+	denominator: number;
+};
 
-type Detail = {
-	type?: "foodItem" | "vibe" | "cleanness" | "noise";
+export type Detail = {
+	type?: 'foodItem' | 'vibe' | 'cleanness' | 'noise';
 	name?: string;
 	descriptionHTML: string;
 	ratings: Array<Rating>;
-
-}
+};
 
 export type Link = {
 	name: string;
@@ -41,9 +39,8 @@ export type LocationInfo = {
 	caption?: string;
 	details?: Array<Detail>;
 	childLocations: Array<LocationInfo>;
-	type: "city" | "restaurant" | "planet" | "accomodation";
+	type: 'city' | 'restaurant' | 'planet' | 'accomodation';
 	position?: Position;
 	url?: string;
 	ratings: Array<Rating>;
-
 };
