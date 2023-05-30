@@ -1,32 +1,11 @@
 <script setup lang="ts">
-	import { tripList } from '../constants/trips';
-	import { prettifyAddress } from '../utils/stringManipulation';
-	import { base } from '$app/paths';
+	import { earth } from '../constants/trips';
+	import LocationBox from './LocationBox.svelte';
 </script>
 
 <h1>Places we've been</h1>
-<div class="subheading">In decreasing order of cool</div>
-<div class="tripsContainer">
-	{#each tripList as trip}
-		<div class="tripBox">
-			<h2 class="tripTitle">
-				{#if trip.iconName}
-					<img
-						class="boxIcon"
-						src={`${base}/images/${trip.iconName}`}
-						alt={`Picture of ${trip.name}`}
-					/>
-				{/if}
-				{trip.name}
-			</h2>
-			<div class="detailsBox">
-				{#if trip.description}
-					<div>{trip.description}</div>
-				{/if}
-			</div>
-		</div>
-	{/each}
-</div>
+<div class="subheading">In decreasing order of size</div>
+<LocationBox location={earth}></LocationBox>
 
 <style>
 	.tripsContainer {
